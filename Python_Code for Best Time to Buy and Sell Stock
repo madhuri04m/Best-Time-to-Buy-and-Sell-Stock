@@ -1,0 +1,27 @@
+###def maxProfit(prices):
+    min_price = float('inf')
+    max_profit = 0
+    for price in prices:
+        min_price = min(min_price, price)
+        profit = price - min_price
+        max_profit = max(max_profit, profit)        
+    return max_profit
+
+prices = [10, 1, 5, 6, 7, 1]
+print(maxProfit(prices))  
+
+
+##class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        min_price = float('inf')
+        max_profit = 0        
+        for price in prices:
+            min_price = min(min_price, price)
+            profit = price - min_price
+            max_profit = max(max_profit, profit)
+        return max_profit
+
+solution = Solution()
+prices = [10, 1, 5, 6, 7, 1]
+print(solution)
+        
